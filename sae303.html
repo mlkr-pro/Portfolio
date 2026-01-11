@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SAE 303 - Malo LE CAER</title>
+    <meta name="title" content="SAE 303 - Malo LE CAER">
+    <meta name="description" content="Découvrez les projets web et design que j'ai réalisé.">
+    <link rel="icon" type="image/png" href="favicon.png">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header class="top-header">
+        <a href="index.html" class="logo">
+            <img src="image/mlkr_logo.png" alt="Logo mlkr">
+        </a>
+        
+        <nav class="filter-bar">
+            <a href="index.html" class="nav-btn">*</a> 
+            <a href="about.html" class="nav-btn">À propos</a>
+            <button class="nav-btn active">Projets</button>
+            <a href="index.html" class="nav-btn">Connect</a>
+        </nav>
+        <a href="mailto:malolkr.pro@gmail.com" class="contact-link">Contact</a>
+    </header>
+
+    <div class="bento-grid project-grid">
+        
+        <div class="card project-header">
+            <div class="project-meta">
+                <span class="tag">Développement Web</span>
+                <span class="tag">2025</span>
+            </div>
+            <h1>SAÉ 303 • Data-visualisation</h1>
+            <p class="subtitle">Concevoir des visualisations de données pour le web.</p>
+        </div>
+
+        <div class="card project-visual">
+            <img src="image/Screen_SAE303.png" alt="Screen SAE303">
+        </div>
+
+        <div class="card project-desc">
+            <h2>Le Contexte</h2>
+            <p>
+                L'objectif de cette SAE était de donner vie à un jeu de données brut. 
+                <br><br>
+                Nous devions réaliser une application interactive ou une infographie permettant de lire et d'interpréter des flux d'informations.
+                <br><br>
+                Nous avons choisi l'approche "Développement" pour créer un outil interactif basé sur des données réelles.
+            </p>
+        </div>
+
+        <div class="card card-stack">
+            <h2>Technologies</h2>
+            <div class="stack-list">
+                <span class="tag">HTML5</span>
+                <span class="tag">Tailwind CSS</span>
+                <span class="tag">JavaScript (Fetch API)</span>
+                <span class="tag">Chart.js</span>
+            </div>
+        </div>
+
+        <div class="card project-links">
+            <h2>Voir le projet</h2>
+            <div class="link-buttons">
+                <a href="https://absy-project.github.io/sae303/" target="_blank" class="nav-btn active">Voir le site ↗</a>
+                <a href="https://github.com/ABSY-Project/sae303" target="_blank" class="nav-btn active">Code Source (GitHub) ↗</a>
+            </div>
+        </div>
+
+        <div class="card project-details">
+            <h2>Apprentissages</h2>
+            <p>
+                • Utilisation de l'API <code>fetch</code> pour charger des données JSON.<br>
+                • Gestion de l'accessibilité (contrastes, balises).<br>
+                • Travail en équipe avec Git.
+            </p>
+        </div>
+
+    </div>
+
+    <div class="project-navigation">
+        <a href="projets.html" class="back-link">← Retour aux projets</a>
+    </div>
+
+    <div class="fixed-theme-switch">
+        <input type="checkbox" id="theme-switch" class="theme-switch">
+        <label for="theme-switch" class="switch-label">
+            <span class="icon-moon">🌙</span>
+            <span class="icon-sun">☀️</span>
+            <span class="ball"></span>
+        </label>
+    </div>
+
+    <div id="image-modal" class="image-modal">
+        <span class="close-modal">&times;</span>
+        <img class="modal-content" id="img-en-grand">
+        <div id="caption"></div>
+    </div>
+
+    <script src="script.js"></script>
+</body>

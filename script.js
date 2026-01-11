@@ -101,3 +101,37 @@ themeSwitch.addEventListener('change', function() {
         localStorage.setItem('theme', 'light'); // Sauvegarde
     }
 });
+
+// --- LIGHTBOX IMAGE ---
+
+// Récupérer les éléments
+const modal = document.getElementById("image-modal");
+const modalImg = document.getElementById("img-en-grand");
+const captionText = document.getElementById("caption");
+const closeBtn = document.querySelector(".close-modal");
+
+// Cible l'image à l'intérieur de la carte .project-visual
+const projectImage = document.querySelector(".project-visual img");
+
+if (projectImage) {
+    projectImage.onclick = function(){
+        modal.style.display = "flex";
+        modal.style.justifyContent = "center";
+        modal.style.alignItems = "center";
+        modalImg.src = this.src;
+    }
+}
+
+// Fermer la modale quand on clique sur la croix
+if (closeBtn) {
+    closeBtn.onclick = function() { 
+        modal.style.display = "none";
+    }
+}
+
+// Fermer aussi quand on clique en dehors de l'image (sur le fond noir)
+window.addEventListener('click', function(event) {
+    if (event.target === modal) {
+        modal.style.display = "none";
+    }
+});
