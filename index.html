@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Malo LE CAER - Développeur Web</title>
+    <meta name="title" content="Malo LE CAER - Développeur Web">
+    <meta name="description" content="Portfolio de Malo Le Caer, étudiant en 2ème année de BUT MMI. Développeur web passionné maitrisant HTML, CSS, JS, PHP & MySQL. Découvrez mes projets.">
+    <link rel="icon" type="image/png" href="favicon.png">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header class="top-header">
+        <a href="index.html" class="logo">
+            <img src="image/mlkr_logo.png" alt="Logo mlkr">
+        </a>
+
+        <nav class="filter-bar">
+            <button class="nav-btn active" data-filter="all">*</button>
+            <button class="nav-btn" data-filter="about">À propos</button>
+            <button class="nav-btn" data-filter="work">Projets</button>
+            <button class="nav-btn" data-filter="social">Connect</button>
+        </nav>
+
+        <a href="mailto:malolkr.pro@gmail.com" class="contact-link">Contact</a>
+    </header>
+
+    <div class="bento-grid">
+        <div class="card card-bio" data-cat="about">
+           <div class="bio-top">
+                <h2 class="terminal-title">
+                    <span id="bio-text"></span><span class="cursor">_</span>
+                </h2>
+        
+                <p id="bio-desc" style="opacity:0; transition: opacity 1s; margin-top: 10px;">
+                    Je suis Malo, étudiant en 2ème année de BUT MMI. 
+                    <br>
+                    J'apprends à construire le web avec HTML, CSS, JS, PHP, PYTHON & MySQL. 
+                    Sinon, je suis passionné par les jeux vidéo et la musique.
+                    <br><br>
+                    Actuellement à la recherche d'un stage de minimum 10 semaines!!
+                </p>
+            </div>
+
+            <div class="bio-bottom">
+                <span class="tag">Design</span>
+                <span class="tag">Code</span>
+            </div>
+        </div>
+
+        <div class="card card-spotify" data-cat="about">
+            <img src="image/Spotify_logo.png" alt="Logo Spotify" class="spotify-img">
+            <a href="https://open.spotify.com/intl-fr/track/0B4YX3OMtZSmPm9KpiZKl2?si=0f9df3faddf54e23" target="_blank" class="spotify-link">
+                <div class="now-playing">
+                    <span class="bar"></span><span class="bar"></span><span class="bar"></span>
+                    <span>EN CE MOMENT</span>
+                </div>
+                <h3>Alkaline</h3>
+                <p>Sleep Token</p>
+            </a>
+        </div>
+
+        <div class="card card-social" data-cat="social">
+            <h2>Réseaux</h2>
+            <div class="social-list">
+                <a href="https://www.linkedin.com/in/malo-le-caer" target="_blank" class="social-item">
+                    <img src="image/Linkedin_logo.webp" alt="Logo LinkedIn" class="social-icon icon-li">
+                    <span>LinkedIn</span>
+                </a>
+                <a href="https://github.com/mlkr-pro" target="_blank" class="social-item">
+                    <img src="image/Github_logo.png" alt="Logo GitHub" class="social-icon icon-gh">
+                    <span>GitHub</span>
+                </a>
+            </div>
+        </div>
+
+        <div class="card card-project-horizontale" data-cat="work">
+            <h2>Projet A</h2>
+            <a href="projet-a.html" class="arrow-btn">→</a>
+        </div>
+
+        <div class="card card-stack" data-cat="about">
+            <h2>Mes compétences</h2>
+            <p>Figma • Front End • Back End • SEO</p>
+        </div>
+
+        <div class="card card-contact" data-cat="social">
+            <h2>Si vous souhaitez me contacter : </h2>
+            <div class="contact-arrows">
+                <span>↓</span>
+                <span>↓</span>
+            </div>
+            <a href="mailto:malolkr.pro@gmail.com" class="card-link">malolkr.pro@gmail.com</a>
+        </div>
+
+        <div class="card card-toggle">
+            <input type="checkbox" id="theme-switch" class="theme-switch">
+            <label for="theme-switch" class="switch-label">
+                <span class="icon-moon">🌙</span>
+                <span class="icon-sun">☀️</span>
+                <span class="ball"></span>
+            </label>
+        </div>
+
+        <div class="card card-parcours" data-cat="about">
+            <h2>Mon parcours</h2>
+            <img src="image/CYU_logo.png" alt="Logo CYU" class="parcours-icon">
+            <div>
+                <h3>BUT Métiers du Multimédia et de l'Internet</h3>
+                <p>IUT Cergy-Pontoise</p>
+                <span>2024-2027</span>
+            </div>
+        </div>
+
+        <div class="card card-project-verticale" data-cat="work">
+            <h2>Projet B</h2>
+            <a href="projet-b.html" class="arrow-btn">→</a>
+        </div>
+
+        <div class="card card-project" data-cat="work">
+            <h2>Projet C</h2>
+            <a href="projet-c.html" class="arrow-btn">→</a>
+        </div>
+
+        <div class="card card-parcours" data-cat="about">
+            <h2>Mon parcours</h2>
+            <img src="image/LPGustaveMonod_logo.png" alt="Logo CYU" class="parcours-icon">
+            <div>
+                <h3>BAC STI2D (option SIN)</h3>
+                <p>Lycée polyvalent Gustave Monod</p>
+                <span>2024</span>
+            </div>
+        </div>
+        
+        <div id="more-btn-container" class="more-container">
+            <a href="#" id="more-btn" class="more-btn">Voir plus</a>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+
+</body>
+</html>
