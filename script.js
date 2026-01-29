@@ -10,9 +10,9 @@ buttons.forEach(btn => {
         buttons.forEach(b => b.classList.remove('active'));
         btn.classList.add('active');
         const targets = [...cards, moreContainer];
+        targets.forEach(el => el.style.transition = "none");
         const state = Flip.getState(targets);
         const filter = btn.getAttribute('data-filter');
-
         cards.forEach(card => {
             const category = card.getAttribute('data-cat');
             if (filter === 'all' || category === filter) {
@@ -43,6 +43,7 @@ buttons.forEach(btn => {
             duration: 0.7,
             ease: "power2.inOut",
             absolute: true, 
+            
             onEnter: elements => {
                 return gsap.fromTo(elements, 
                     {opacity: 0, scale: 0}, 
@@ -54,6 +55,12 @@ buttons.forEach(btn => {
                 return gsap.to(elements, 
                     {opacity: 0, scale: 0, duration: 0.7, ease: "power2.inOut"}
                 );
+            },
+
+            onComplete: () => {
+                setTimeout(() => {
+                    targets.forEach(el => el.style.removeProperty("transition"));
+                }, 50);
             }
         });
     });
